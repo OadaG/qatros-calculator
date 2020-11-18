@@ -1,0 +1,119 @@
+:root{
+  --bg: #f5f6f7;
+  --color-text: #9c9c9c;
+  --color-orange: #ff6a00;
+  --color-shadows:rgb(255, 255, 255) -6px -6px 9px, 
+                  rgba(0, 0, 0, 0.1) 6px 6px 9px;
+  --color-shadow: -4px -2px 4px 0px #ffffff, 
+                    4px 2px 6px 0px #DFE4EA;
+  --color-inset-shadow: inset -2px -2px 6px rgba(255,255,255,0.8),
+                        inset 2px 2px 6px rgba(0,0,0,0.1); 
+  --color-equal-shadow: -2px -2px 6px rgb(3, 169, 244, 0.01),
+                        2px 2px 6px rgba(0,0,0,0.3);
+  --color-equal-inset-shadow: inset -2px -2px 6px rgba(255, 106, 0,0.5),
+                              inset 2px 2px 6px rgba(0,0,0,0.3); 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+}
+
+.main {
+  width: 300px;
+  height: 460px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px; 
+  background-color: var(--bg);
+  box-shadow: var(--color-shadow);  
+  overflow: hidden;
+}
+
+
+.header-screen{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: .175rem;
+}
+
+.header-screen > span {
+  background: none;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: var(--color-text);
+}
+.result{
+  height: 27%;
+  position: relative;
+  background-color: var(--bg);
+  border-top: 1px solid var(--color-text);
+  border-bottom: 1px solid var(--color-text);
+  box-shadow: var(--color-shadow);
+}
+
+.result > input {
+  position: absolute;
+    text-align: right;
+    bottom: 2%; 
+    right: 5%;
+    font-size: 2rem;
+    color: var(--color-text);
+    outline:none;
+    border: none;
+}
+.keyboard {
+  padding: 2.185rem 1.25rem;
+  display: flex;
+}
+
+.key-section {
+  
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);  
+  border-radius: 1.875rem;
+}
+
+.side-section{
+  float: right;
+  display: flex;
+  flex-direction: column;
+  padding: 0 .25rem;
+}
+.btn {
+  font-weight: 700;
+  outline: none;
+  margin: .25rem .5rem;
+  width: 43px;
+  height: 43px;
+  border-radius: 15%;
+  border: none;
+  background-color: var(--bg);
+  font-size: 1.150rem;
+  cursor: pointer;
+  box-shadow: var(--color-shadows);
+}
+
+.number {
+  color: var(--color-text);
+}
+
+.operator {
+  color: var(--color-orange); 
+}
+.number:active, 
+.operator:active{
+  box-shadow: var(--color-inset-shadow); 
+}
+.number:hover,  .operator:hover{
+  background: #DFE4EA;
+}
